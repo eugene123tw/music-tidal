@@ -1,4 +1,4 @@
-setcpm(20/4)
+setcpm(60/4)
 // Key in: F
 // Other Chords (Essentials Summary):
 // Chord	Essential Notes	Optional
@@ -14,12 +14,18 @@ let aug7sharp9 = n("0, 2, 4, 6b, 8#")
 let minor9 = n("0, 2b, 4, 6b, 8")
 let dominant7flat9 = n("0, 2, 6b, 8b")
 
-let melody = note("e5@2 d5 c5@2 a#4 a4@2 g4 f4 d5@2 e3@2 [d3 c#4 d4 f4 a4] e5@2 a4 g4@2")
+let melody = cat(
+  note("e5 ~ ~ d5"),
+  note("c5 ~ ~ a4#"),
+  note("a4 ~ ~ g4"),
+  note("f4 d5 ~ ~ "),
+  note("e3 ~ d4 [c4# d4 f4 a4]"),
+)
 
 // Play multiple patterns at the same time, 
 // make sure to write $: before each (this is similar to stack()):
 
-$: "[a b c e d b]".pickRestart({
+$: "[a b c e d b a a]/8".pickRestart({
     a: minor13.scale("G:major"),
     b: aug7sharp9.scale("A:major"),
     c: chord("D-9").voicing(),
