@@ -16,10 +16,10 @@ let dominant7flat9 = n("0, 2, 6b, 8b")
 
 let melody = cat(
   note("e5 ~ ~ d5"),
-  note("c5 ~ ~ a4#"),
+  note("c5 ~ ~ a#4"),
   note("a4 ~ ~ g4"),
   note("f4 d5 ~ ~ "),
-  note("e3 ~ d4 [c4# d4 f4 a4]"),
+  note("e3 ~ d4 [c#4 d4 f4 a4]"),
 )
 
 // Play multiple patterns at the same time, 
